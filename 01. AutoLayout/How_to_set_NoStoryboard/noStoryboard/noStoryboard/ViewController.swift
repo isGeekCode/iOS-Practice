@@ -37,6 +37,8 @@ struct ViewControllerPrepresentable_PreviewProvider: PreviewProvider {
     ViewControllerPresentable()
     //safeArea까지만 색상이 들어간 경우
       .ignoresSafeArea()
+    //attribute inspector에서 이것저것 수정하면 코드 자동생성됨
+
   }
 }
 
