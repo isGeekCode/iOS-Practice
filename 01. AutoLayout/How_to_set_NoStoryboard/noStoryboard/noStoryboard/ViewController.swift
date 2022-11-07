@@ -35,6 +35,8 @@ struct ViewControllerPresentable: UIViewControllerRepresentable {
 struct ViewControllerPrepresentable_PreviewProvider: PreviewProvider {
   static var previews: some View {
     ViewControllerPresentable()
+    //safeArea까지만 색상이 들어간 경우
+      .ignoresSafeArea()
   }
 }
 
