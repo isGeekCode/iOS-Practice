@@ -21,13 +21,27 @@ class ViewController: UIViewController {
     //시스템은 뷰의 프레임과 자동 크기 조정 마스크를 기반으로 한세트의 제약조건을 자동으로 생성한다
     someView.translatesAutoresizingMaskIntoConstraints = false
     
-    //크기
+    // 방법1.
+      
+    // 크기
     someView.widthAnchor.constraint(equalToConstant:200).isActive = true
     someView.heightAnchor.constraint(equalToConstant:200).isActive = true
     
-    //위치
+    // 위치
     someView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
     someView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 100).isActive = true
+     
+    /**
+     방법2.
+      NSLayoutConstraint.activate([
+        // 크기
+        someView.widthAnchor.constraint(equalToConstant:200),
+        someView.heightAnchor.constraint(equalToConstant:200),
+        // 위치
+        someView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+        someView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 100)
+      ])
+    */
   }
 }
 
