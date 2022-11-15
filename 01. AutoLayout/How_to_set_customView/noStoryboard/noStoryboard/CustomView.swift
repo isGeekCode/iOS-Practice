@@ -19,6 +19,25 @@ class CustomView: UIView {
     didSet {
       // 값이 설정이 됐을때 알수 있는 부분
       self.layer.cornerRadius = cornerRadius
+      
+    }
+  }
+  
+  @IBInspectable
+  var borderWidth: CGFloat = 0 {
+    didSet {
+      // 값이 설정이 됐을때 알수 있는 부분
+      self.layer.borderWidth = borderWidth
+      
+    }
+  }
+  
+  @IBInspectable
+  var borderColor: UIColor = UIColor.clear {
+    didSet {
+      // 값이 설정이 됐을때 알수 있는 부분
+      self.layer.borderColor = borderColor.cgColor
+      
     }
   }
 }

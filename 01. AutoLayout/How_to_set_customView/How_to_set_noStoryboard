@@ -82,4 +82,74 @@ struct ViewControllerPrepresentable_PreviewProvider: PreviewProvider {
 ![Simulator Screen Shot - iPhone 12 Pro - 2022-11-15 at 18 32 36](https://user-images.githubusercontent.com/76529148/201884246-7d2798fe-06e5-480f-86ec-e0b7472801fd.png)
 
 
+### MainView안에서 SomeView를 생성하여 할당하기
+MainVC안에서 아래와 같이 적용
+
+```swift
+    someView.layer.masksToBounds = false // 안에있는 것도 동그랗게 하고 싶을 때
+    someView.layer.cornerRadius = 20 
+    someView.layer.borderWidth = 20 // 가장자리 보더라인 두께
+    someView.layer.borderColor = UIColor.systemGreen.cgColor // 가장자리 보더라인 색상
+    someView.layer.masksToBounds = false // 안에있는 것도 동그랗게 하고 싶을 때
+    
+```
+
+
+
+![Simulator Screen Shot - iPhone 12 Pro - 2022-11-15 at 18 32 36](https://user-images.githubusercontent.com/76529148/201889854-735903cf-89be-42de-b8eb-bb5f2cfd70ee.png)
+
 ### CustomView를 생성하여 할당하기
+1. CustomView 클래스를 따로 생성
+2. 접근하고 싶은 변수를 할당하고 didSet을 통해 해당 변수가 새로운 값을 받을 때에 접근할 수 있다.
+3. @IBInspectable은 스토리보드상에서 조작이 가능하도록하는 어노테이션이고, @IBDesignable는 스토리보드상에서 바로확인가능하게 하는 어노테이션이다.
+**borderWidth가 ConerRadius보다 넓으면 적용이 안됨**
+
+
+```swift
+// 해당 어노테이션을 달아두면 스토리보드상에서 아래 inspectable달아둔 요소들을 수정할때 바로바로 스토리보드에서 확인가능
+@IBDesignable
+class CustomView: UIView {
+  
+  // 해당 어노테이션을 달아두면 스토리보드의 패널에서 GUI상에서 조작할수가 있다. 사실 이프로젝트는 노스토리보드라 필요없다.
+  // 그러면 GUI에서 값을 넣어둠으로 바로 줄 수 있다.
+  @IBInspectable
+  var cornerRadius: CGFloat = 0 {
+    didSet {
+      // 값이 설정이 됐을때 알수 있는 부분
+      self.layer.cornerRadius = cornerRadius
+      
+    }
+  }
+  
+  @IBInspectable
+  var borderWidth: CGFloat = 0 {
+    didSet {
+      // 값이 설정이 됐을때 알수 있는 부분
+      self.layer.borderWidth = borderWidth
+      
+    }
+  }
+  
+  @IBInspectable
+  var borderColor: UIColor = UIColor.clear {
+    didSet {
+      // 값이 설정이 됐을때 알수 있는 부분
+      self.layer.borderColor = borderColor.cgColor
+      
+    }
+  }
+}
+```
+
+이렇게 할당하면 아래와 같이 접근 가능하다
+
+```swift
+    someView.layer.masksToBounds = false // 안에있는 것도 동그랗게 하고 싶을 때
+    
+    someView.cornerRadius = 20 // CustomView에서 바로 접근 가능
+    someView.borderWidth = 10 // borderWidth가 ConerRadius보다 넓으면 적용이 안됨
+    someView.borderColor = .systemGreen
+```
+
+
+![Simulator Screen Shot - iPhone 12 Pro - 2022-11-15 at 18 32 36](https://user-images.githubusercontent.com/76529148/201889854-735903cf-89be-42de-b8eb-bb5f2cfd70ee.png)

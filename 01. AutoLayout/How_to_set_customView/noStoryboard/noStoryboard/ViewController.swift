@@ -43,8 +43,20 @@ class ViewController: UIViewController {
   func setStyle() {
     self.view.backgroundColor = .white
     someView.backgroundColor = .systemYellow
+    someView.layer.masksToBounds = false // 안에있는 것도 동그랗게 하고 싶을 때
+
 //    someView.layer.cornerRadius = 20 // UIView일때 접근방법
-//    someView.cornerRadius = 10 // CustomView에서 바로 접근 가능
+    someView.cornerRadius = 20 // CustomView에서 바로 접근 가능
+    
+    // 일일히 할때는 이렇게 할것
+    /**
+    someView.layer.borderWidth = 20 // 가장자리 보더라인 두께
+    someView.layer.borderColor = UIColor.systemGreen.cgColor // 가장자리 보더라인 색상
+    someView.layer.masksToBounds = false // 안에있는 것도 동그랗게 하고 싶을 때
+     */
+    someView.borderWidth = 10 // borderWidth가 ConerRadius보다 넓으면 적용이 안됨
+    someView.borderColor = .systemGreen
+
   }
 
 }
