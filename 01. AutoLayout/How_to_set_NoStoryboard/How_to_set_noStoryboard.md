@@ -23,27 +23,6 @@
 
 ## 4. **window 구현**
 
-### iOS 13 이후의 기기에 적용하는 방법
-
-```swift
-import UIKit
-
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
-    var window: UIWindow?
-
-    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let scene = scene as? UIWindowScene else { return }
-        let window = UIWindow(windowScene: scene)
-        self.window = window
-
-        let mainVC = ViewController()
-        window.rootViewController = mainVC
-        window.makeKeyAndVisible()
-    }
-}
-```
-
 ### iOS 13 이전의 기기에 적용하는 방법
 
 Scene life cycle을 채택했을 때, iOS 13이전의 기기에서도 작동하려면 다음과 같은 코드를 AppDelegate에 추가해주면 된다.
@@ -67,4 +46,60 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 }
+```
+
+### iOS 13 이후의 기기에 적용하는 방법
+
+```swift
+import UIKit
+
+class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+
+    var window: UIWindow?
+
+    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        guard let scene = scene as? UIWindowScene else { return }
+        let window = UIWindow(windowScene: scene)
+        self.window = window
+
+        let mainVC = ViewController()
+        window.rootViewController = mainVC
+        window.makeKeyAndVisible()
+    }
+}
+```
+
+### 5. SceleDelegate 전체
+
+```swift
+
+import UIKit
+
+class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+
+    var window: UIWindow?
+
+    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+
+        guard let scene = scene as? UIWindowScene else { return }
+        let window = UIWindow(windowScene: scene)
+        self.window = window
+
+        let mainVC = ViewController()
+        window.rootViewController = mainVC
+        window.makeKeyAndVisible()
+    }
+
+    func sceneDidDisconnect(_ scene: UIScene) { }
+
+    func sceneDidBecomeActive(_ scene: UIScene) { }
+
+    func sceneWillResignActive(_ scene: UIScene) { }
+
+    func sceneWillEnterForeground(_ scene: UIScene) { }
+
+    func sceneDidEnterBackground(_ scene: UIScene) { }
+
+}
+
 ```
