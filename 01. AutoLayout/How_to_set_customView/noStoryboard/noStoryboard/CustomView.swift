@@ -40,4 +40,46 @@ class CustomView: UIView {
       
     }
   }
+  // MARK:  - 정사각형체크 방법1.
+  
+  // isCircle이 true일 경우, conerRadius에 frame 가로길이의 반을 넣어주는 로직
+  //  @IBInspectable
+  //  var isCircle: Bool = false {
+  //    didSet {
+  //
+  //      if self.frame.width == self.frame.height
+  //      && isCircle {
+  //        self.layer.cornerRadius = self.frame.width / 2
+  //      }
+  //    }
+  //
+  //  }
+  
+  
+  
+  // MARK: - 정사각형 체크방법2
+  // -> isCircle과 isSquare를 모두 체크하는 로직
+  
+//  @IBInspectable
+//  var isCircle: Bool = false {
+//    didSet {
+//
+//      if self.frame.width == self.frame.height
+//          && isCircle {
+//        self.layer.cornerRadius = self.frame.width / 2
+//      }
+//    }
+//  }
+
+  /// 뷰 정사각형 여부
+  /// - Returns: 여부
+//  fileprivate func isSquare() -> Bool {
+//      return self.frame.width == self.frame.height
+//  }
+  
+  fileprivate var isSquare: Bool {
+    get {
+        return self.frame.width == self.frame.height
+    }
+  }
 }
