@@ -85,44 +85,17 @@ class CustomView: UIView {
     }
   }
   
-  @IBInspectable
-  var borderWidth: CGFloat = 0 {
-    didSet {
-      // 값이 설정이 됐을때 알수 있는 부분
-      self.layer.borderWidth = borderWidth
-      
-    }
-  }
+  // MARK: - Shadow
   
   @IBInspectable
-  var borderColor: UIColor = UIColor.clear {
+  var hasShadow: Bool = false {
     didSet {
-      // 값이 설정이 됐을때 알수 있는 부분
-      self.layer.borderColor = borderColor.cgColor
-      
-    }
-  }  
-  
-  // MARK: - 정사각형 체크방법
-  // -> isCircle과 isSquare를 모두 체크하는 로직
-  
-  @IBInspectable
-  var isCircle: Bool = false {
-    didSet {
-
-      if isSquare && isCircle {
-        self.layer.cornerRadius = self.frame.width / 2
+      if hasShadow {
+        layer.applySketchShadow()
       }
     }
   }
-
-  /// 뷰 정사각형 여부
-  /// - Returns: 여부
-
-  fileprivate var isSquare: Bool {
-    get {
-        return self.frame.width == self.frame.height
-    }
-  }
-}
 ```
+
+이제 ViewController에서 hasShadow를  true로 해주면 미리 세팅해둔 그림자가 생성된다.
+
