@@ -1,4 +1,4 @@
-#View에 shadow, spread, blur 를 만드는 방법
+View에 shadow, spread, blur 를 만드는 방법
 
 
 ## 1. ios shadow blur spread 등등의 검색어로 스택오버플로우 자료 검색
