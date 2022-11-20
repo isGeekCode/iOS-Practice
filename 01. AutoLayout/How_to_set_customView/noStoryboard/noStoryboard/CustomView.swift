@@ -60,16 +60,16 @@ class CustomView: UIView {
   // MARK: - 정사각형 체크방법2
   // -> isCircle과 isSquare를 모두 체크하는 로직
   
-//  @IBInspectable
-//  var isCircle: Bool = false {
-//    didSet {
-//
-//      if self.frame.width == self.frame.height
-//          && isCircle {
-//        self.layer.cornerRadius = self.frame.width / 2
-//      }
-//    }
-//  }
+  @IBInspectable
+  var isCircle: Bool = false {
+    didSet {
+
+      if self.frame.width == self.frame.height
+          && isCircle {
+        self.layer.cornerRadius = self.frame.width / 2
+      }
+    }
+  }
 
   /// 뷰 정사각형 여부
   /// - Returns: 여부
