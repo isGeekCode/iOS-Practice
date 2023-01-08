@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		966CD23D295BFEDF000A16ED /* DynamicSplashModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966CD23C295BFEDF000A16ED /* DynamicSplashModel.swift */; };
 		9681C9D5295A65670096B634 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9681C9D4295A65670096B634 /* AppDelegate.swift */; };
 		9681C9D7295A65670096B634 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9681C9D6295A65670096B634 /* SceneDelegate.swift */; };
 		9681C9D9295A65670096B634 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9681C9D8295A65670096B634 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		966CD23C295BFEDF000A16ED /* DynamicSplashModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicSplashModel.swift; sourceTree = "<group>"; };
 		9681C9D1295A65670096B634 /* jsonDecode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jsonDecode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9681C9D4295A65670096B634 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9681C9D6295A65670096B634 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				9681C9D6295A65670096B634 /* SceneDelegate.swift */,
 				9681C9D8295A65670096B634 /* ViewController.swift */,
 				9681C9E8295A66500096B634 /* PersonModel.swift */,
+				966CD23C295BFEDF000A16ED /* DynamicSplashModel.swift */,
 				9681C9DA295A65670096B634 /* Main.storyboard */,
 				9681C9DD295A65690096B634 /* Assets.xcassets */,
 				9681C9DF295A65690096B634 /* LaunchScreen.storyboard */,
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9681C9D9295A65670096B634 /* ViewController.swift in Sources */,
+				966CD23D295BFEDF000A16ED /* DynamicSplashModel.swift in Sources */,
 				9681C9D5295A65670096B634 /* AppDelegate.swift in Sources */,
 				9681C9D7295A65670096B634 /* SceneDelegate.swift in Sources */,
 				9681C9E9295A66500096B634 /* PersonModel.swift in Sources */,

@@ -55,21 +55,42 @@ class ViewController: UIViewController {
 
         print("exampleJSON: \n\(exampleJSON)")
         
-        
+        let urlString = "https://devapi.hoottown.com/api/v1.0/display/banner/read-banner-list?deviceCd=PC&bannerAutoSn=999"
+        guard let url = URL(string: urlString) else { return }
+
         
         let decoder = JSONDecoder()
-        let data = exampleJSON.data(using: .utf8)
-        if let data = data {
-            print("여기까지 가능")
-            
-            if let myPerson = try? decoder.decode(Person.self, from: data) {
+//        let data = exampleJSON.data(using: .utf8)
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            print("여기옴?")
+            print("url: \(url)")
 
-                print("myPerson: \(myPerson)")
-                let newPerson = Person(name: myPerson.name, age: myPerson.age)
-                print("newPerson: \(newPerson)")
-
+            if error != nil {
+                print("error\(error?.localizedDescription)")
             }
-        }
+            
+            guard let safeData = data else {return}
+            
+            let jsonString = String(data: safeData, encoding: .utf8)
+            print("jsonString: \(jsonString)")
+
+            do {
+                let mySplash = try decoder.decode(BannerCntList.self, from: safeData)
+                    print("mySplash: \(mySplash)")
+                
+
+            } catch {
+                print("error: \(error)")
+            }
+            
+//            if let jsonParse = self.parseJSON(safeDate) {
+//                print("jsonParse: \(jsonParse)")
+////                completion(.success(jsonParse), nil)
+//            } else {
+//                completion(.failure(.noResult), nil)
+//            }
+            
+        }.resume()
         
     }
 
