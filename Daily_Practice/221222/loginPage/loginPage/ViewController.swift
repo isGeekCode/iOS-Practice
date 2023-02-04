@@ -25,7 +25,6 @@ class ViewController: UIViewController {
     topContainerView.addSubview(figmaLogoCircleView)
     figmaLogoCircleView.addSubview(figmaLogoView)
 
-
     figmaLogoCircleView.translatesAutoresizingMaskIntoConstraints = false
     topContainerView.translatesAutoresizingMaskIntoConstraints = false
     figmaLogoView.translatesAutoresizingMaskIntoConstraints = false
