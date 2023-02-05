@@ -13,6 +13,8 @@ import UIKit
  
  updateButton을 누르면 updatePersonName 메서드가 호출되어 personNameLabel이 업데이트되고, resetButton을 누르면 텍스트 필드와 personNameLabel이 초기화.
  */
+// MARK: - Model
+
 //class Person {
 //  var firstName: String
 //  var lastName: String
@@ -25,7 +27,7 @@ import UIKit
 
 class MVCProViewController: UIViewController {
   
-  
+  // MARK: - View
   @IBOutlet weak var firstNameTextField: UITextField!
   @IBOutlet weak var lastNameTextField: UITextField!
   @IBOutlet weak var personNameLabel: UILabel!
@@ -33,7 +35,6 @@ class MVCProViewController: UIViewController {
   @IBOutlet weak var updateButton: UIButton!
   @IBOutlet weak var resetButton: UIButton!
   
-  // MARK: - Model
   var person = Person(firstName: "", lastName: "")
   
   override func viewDidLoad() {
@@ -44,10 +45,10 @@ class MVCProViewController: UIViewController {
     updateButton.addTarget(self, action: #selector(updateButtonTapped), for: .touchUpInside)
     resetButton.addTarget(self, action: #selector(resetButtonTapped), for: .touchUpInside)
     
-    
     setUI()
   }
   
+  // MARK: - Controller
   @objc func updateButtonTapped() {
     updatePersonName()
   }
