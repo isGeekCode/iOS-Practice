@@ -129,7 +129,7 @@ class MVVMViewController: UIViewController {
 extension MVVMViewController: UITextFieldDelegate {
   
   func textFieldDidEndEditing(_ textField: UITextField) {
-    updatePersonName()
+//    updatePersonName()
     print(textField.text ?? "")
   }
   
