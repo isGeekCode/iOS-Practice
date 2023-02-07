@@ -13,15 +13,15 @@ import UIKit
  
  updateButton을 누르면 updatePersonName 메서드가 호출되어 personNameLabel이 업데이트되고, resetButton을 누르면 텍스트 필드와 personNameLabel이 초기화.
  */
-class Person {
-  var firstName: String
-  var lastName: String
-  
-  init(firstName: String, lastName: String) {
-    self.firstName = firstName
-    self.lastName = lastName
-  }
-}
+//class Person {
+//  var firstName: String
+//  var lastName: String
+//
+//  init(firstName: String, lastName: String) {
+//    self.firstName = firstName
+//    self.lastName = lastName
+//  }
+//}
 
 /// View를 위한 Model
 class PersonViewModel {

@@ -9,17 +9,22 @@
 /* Begin PBXBuildFile section */
 		9C3C46C7298E9C4800B62258 /* MVCProViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3C46C6298E9C4800B62258 /* MVCProViewController.swift */; };
 		9C3C46C9298E9FAE00B62258 /* MVVMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3C46C8298E9FAE00B62258 /* MVVMViewController.swift */; };
+		9C3C46CB2991408C00B62258 /* MVVMRXViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3C46CA2991408C00B62258 /* MVVMRXViewController.swift */; };
 		9C7CD16B298E916F00176B22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7CD16A298E916F00176B22 /* AppDelegate.swift */; };
 		9C7CD16D298E916F00176B22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7CD16C298E916F00176B22 /* SceneDelegate.swift */; };
 		9C7CD16F298E916F00176B22 /* MVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7CD16E298E916F00176B22 /* MVCViewController.swift */; };
 		9C7CD172298E916F00176B22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C7CD170298E916F00176B22 /* Main.storyboard */; };
 		9C7CD174298E917100176B22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C7CD173298E917100176B22 /* Assets.xcassets */; };
 		9C7CD177298E917100176B22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C7CD175298E917100176B22 /* LaunchScreen.storyboard */; };
+		EB124A7DE9E81EC3C27D11C0 /* Pods_PersonMVXApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345791055647A98525DF72EB /* Pods_PersonMVXApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		129476C8C930ADB80AD32626 /* Pods-PersonMVXApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersonMVXApp.release.xcconfig"; path = "Target Support Files/Pods-PersonMVXApp/Pods-PersonMVXApp.release.xcconfig"; sourceTree = "<group>"; };
+		345791055647A98525DF72EB /* Pods_PersonMVXApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PersonMVXApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C3C46C6298E9C4800B62258 /* MVCProViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVCProViewController.swift; sourceTree = "<group>"; };
 		9C3C46C8298E9FAE00B62258 /* MVVMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMViewController.swift; sourceTree = "<group>"; };
+		9C3C46CA2991408C00B62258 /* MVVMRXViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMRXViewController.swift; sourceTree = "<group>"; };
 		9C7CD167298E916F00176B22 /* PersonMVXApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonMVXApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C7CD16A298E916F00176B22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C7CD16C298E916F00176B22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +33,7 @@
 		9C7CD173298E917100176B22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C7CD176298E917100176B22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C7CD178298E917100176B22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E46526EA42383BD4BC64D96F /* Pods-PersonMVXApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersonMVXApp.debug.xcconfig"; path = "Target Support Files/Pods-PersonMVXApp/Pods-PersonMVXApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +41,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB124A7DE9E81EC3C27D11C0 /* Pods_PersonMVXApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		233BC7B5EB4DD86939DF673D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E46526EA42383BD4BC64D96F /* Pods-PersonMVXApp.debug.xcconfig */,
+				129476C8C930ADB80AD32626 /* Pods-PersonMVXApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7BEFA1B4706A9F487041FE09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				345791055647A98525DF72EB /* Pods_PersonMVXApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9C7CD15E298E916F00176B22 = {
 			isa = PBXGroup;
 			children = (
 				9C7CD169298E916F00176B22 /* PersonMVXApp */,
 				9C7CD168298E916F00176B22 /* Products */,
+				233BC7B5EB4DD86939DF673D /* Pods */,
+				7BEFA1B4706A9F487041FE09 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +92,7 @@
 				9C7CD16E298E916F00176B22 /* MVCViewController.swift */,
 				9C3C46C6298E9C4800B62258 /* MVCProViewController.swift */,
 				9C3C46C8298E9FAE00B62258 /* MVVMViewController.swift */,
+				9C3C46CA2991408C00B62258 /* MVVMRXViewController.swift */,
 				9C7CD170298E916F00176B22 /* Main.storyboard */,
 				9C7CD173298E917100176B22 /* Assets.xcassets */,
 				9C7CD175298E917100176B22 /* LaunchScreen.storyboard */,
@@ -80,9 +108,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C7CD17B298E917100176B22 /* Build configuration list for PBXNativeTarget "PersonMVXApp" */;
 			buildPhases = (
+				F416B2E6A3C80FCDF840DD42 /* [CP] Check Pods Manifest.lock */,
 				9C7CD163298E916F00176B22 /* Sources */,
 				9C7CD164298E916F00176B22 /* Frameworks */,
 				9C7CD165298E916F00176B22 /* Resources */,
+				48EED390AFFD4111DF501273 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -139,6 +169,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		48EED390AFFD4111DF501273 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PersonMVXApp/Pods-PersonMVXApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PersonMVXApp/Pods-PersonMVXApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PersonMVXApp/Pods-PersonMVXApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F416B2E6A3C80FCDF840DD42 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PersonMVXApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9C7CD163298E916F00176B22 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -148,6 +220,7 @@
 				9C3C46C9298E9FAE00B62258 /* MVVMViewController.swift in Sources */,
 				9C7CD16B298E916F00176B22 /* AppDelegate.swift in Sources */,
 				9C7CD16D298E916F00176B22 /* SceneDelegate.swift in Sources */,
+				9C3C46CB2991408C00B62258 /* MVVMRXViewController.swift in Sources */,
 				9C3C46C7298E9C4800B62258 /* MVCProViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,6 +363,7 @@
 		};
 		9C7CD17C298E917100176B22 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E46526EA42383BD4BC64D96F /* Pods-PersonMVXApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -318,6 +392,7 @@
 		};
 		9C7CD17D298E917100176B22 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 129476C8C930ADB80AD32626 /* Pods-PersonMVXApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
